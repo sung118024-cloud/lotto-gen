@@ -105,8 +105,8 @@ export default function LottoGenerator() {
                             번호를 정밀 분석 중입니다.
                         </p>
 
-                        <div style={{ margin: '0 auto 1.5rem', display: 'flex', justifyContent: 'center' }}>
-                            <KakaoAdFit unit="DAN-853ZpXquPwh8qIxA" width={320} height={100} />
+                        <div style={{ margin: '1.5rem auto 1.5rem', display: 'flex', justifyContent: 'center' }}>
+                            <KakaoAdFit unit="DAN-ZL4gjf057FeZAacr" width={320} height={100} />
                         </div>
 
                         <button
