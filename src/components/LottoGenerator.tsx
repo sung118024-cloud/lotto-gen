@@ -26,6 +26,18 @@ export default function LottoGenerator() {
         return () => clearInterval(timer);
     }, [showAd, timeLeft]);
 
+    // Prevent scroll when modal is open
+    useEffect(() => {
+        if (showAd) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [showAd]);
+
     const handleGenerateClick = () => {
         setShowAd(true);
         setCanCloseAd(false);
@@ -82,30 +94,42 @@ export default function LottoGenerator() {
                     width: '100%',
                     height: '100%',
                     backgroundColor: 'rgba(0,0,0,0.85)',
-                    zIndex: 1000,
+                    zIndex: 9999, // Highest priority
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    padding: '1rem'
+                    padding: '1rem',
+                    backdropFilter: 'blur(5px)' // Blur background
                 }}>
                     <div style={{
+                        position: 'relative', // Establish stacking context
                         backgroundColor: '#fff',
                         padding: '2rem',
                         borderRadius: '16px',
                         maxWidth: '400px',
                         width: '100%',
                         textAlign: 'center',
-                        boxShadow: '0 10px 25px rgba(0,0,0,0.5)'
+                        boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                        zIndex: 10000 // Above the overlay
                     }}>
                         <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#333' }}>
                             잠시만 기다려주세요...
                         </h3>
-                        <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.9rem' }}>
+                        <p style={{ color: '#666', marginBottom: '1rem', fontSize: '0.9rem' }}>
                             번호를 정밀 분석 중입니다.
                         </p>
 
-                        <div style={{ margin: '1.5rem auto 1.5rem', display: 'flex', justifyContent: 'center' }}>
+                        {/* Ad Container with explicit styling */}
+                        <div style={{
+                            margin: '1rem auto 2rem',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            minHeight: '100px', // Reserve space
+                            backgroundColor: '#f8f9fa', // Placeholder color
+                            borderRadius: '8px',
+                            overflow: 'hidden'
+                        }}>
                             <KakaoAdFit unit="DAN-ZL4gjf057FeZAacr" width={320} height={100} />
                         </div>
 
