@@ -106,7 +106,7 @@ export default function LottoGenerator() {
                         </p>
 
                         <div style={{ margin: '0 auto 1.5rem', display: 'flex', justifyContent: 'center' }}>
-                            <KakaoAdFit unit="DAN-9ctCyY0uRHWIh1Oy" width={320} height={100} />
+                            <KakaoAdFit unit="DAN-853ZpXquPwh8qIxA" width={320} height={100} />
                         </div>
 
                         <button

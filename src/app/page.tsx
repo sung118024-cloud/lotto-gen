@@ -80,7 +80,7 @@ export default function Home() {
 
           {/* Bottom Ad (Mobile Only) */}
           <div className="mobile-ad" style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
-            <KakaoAdFit unit="DAN-9ctCyY0uRHWIh1Oy" width={320} height={100} />
+            <KakaoAdFit unit="DAN-853ZpXquPwh8qIxA" width={320} height={100} />
           </div>
 
           <footer style={{ textAlign: 'center', marginTop: '4rem', color: '#888', fontSize: '0.8rem' }}>
@@ -94,7 +94,7 @@ export default function Home() {
         {/* Right Ad (Desktop Only) */}
         <aside className="desktop-ad">
           <div style={{ position: 'sticky', top: '2rem' }}>
-            <KakaoAdFit unit="DAN-EaVEMlrnSzBUF2lT" width={160} height={600} />
+            <KakaoAdFit unit="DAN-NKzkF6qv8l14kdY8" width={160} height={600} />
           </div>
         </aside>
 
