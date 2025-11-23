@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 import { getWeightedRandomNumber } from '@/lib/lotto-stats';
-import AdPlaceholder from './AdPlaceholder';
+import KakaoAdFit from './KakaoAdFit';
 
 export default function LottoGenerator() {
     const [numbers, setNumbers] = useState<number[]>([]);
@@ -105,8 +105,8 @@ export default function LottoGenerator() {
                             번호를 정밀 분석 중입니다.
                         </p>
 
-                        <div style={{ margin: '0 auto 1.5rem' }}>
-                            <AdPlaceholder format="horizontal" />
+                        <div style={{ margin: '0 auto 1.5rem', display: 'flex', justifyContent: 'center' }}>
+                            <KakaoAdFit unit="DAN-9ctCyY0uRHWIh1Oy" width={320} height={100} />
                         </div>
 
                         <button

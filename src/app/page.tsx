@@ -2,7 +2,7 @@
 
 import LottoGenerator from '@/components/LottoGenerator';
 import WinningNumbers from '@/components/WinningNumbers';
-import AdPlaceholder from '@/components/AdPlaceholder';
+import KakaoAdFit from '@/components/KakaoAdFit';
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
         {/* Left Ad (Desktop Only) */}
         <aside className="desktop-ad">
           <div style={{ position: 'sticky', top: '2rem' }}>
-            <AdPlaceholder format="vertical" />
+            <KakaoAdFit unit="DAN-EaVEMlrnSzBUF2lT" width={160} height={600} />
           </div>
         </aside>
 
@@ -49,8 +49,8 @@ export default function Home() {
           </header>
 
           {/* Top Ad (Mobile Only) */}
-          <div className="mobile-ad" style={{ marginBottom: '2rem' }}>
-            <AdPlaceholder format="horizontal" />
+          <div className="mobile-ad" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <KakaoAdFit unit="DAN-9ctCyY0uRHWIh1Oy" width={320} height={100} />
           </div>
 
           <WinningNumbers />
@@ -79,8 +79,8 @@ export default function Home() {
           </section>
 
           {/* Bottom Ad (Mobile Only) */}
-          <div className="mobile-ad" style={{ marginTop: '2rem' }}>
-            <AdPlaceholder format="horizontal" />
+          <div className="mobile-ad" style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <KakaoAdFit unit="DAN-9ctCyY0uRHWIh1Oy" width={320} height={100} />
           </div>
 
           <footer style={{ textAlign: 'center', marginTop: '4rem', color: '#888', fontSize: '0.8rem' }}>
@@ -94,7 +94,7 @@ export default function Home() {
         {/* Right Ad (Desktop Only) */}
         <aside className="desktop-ad">
           <div style={{ position: 'sticky', top: '2rem' }}>
-            <AdPlaceholder format="vertical" />
+            <KakaoAdFit unit="DAN-EaVEMlrnSzBUF2lT" width={160} height={600} />
           </div>
         </aside>
 
